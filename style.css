@@ -1,0 +1,206 @@
+
+body, html {
+    background-image: url('https://pbs.twimg.com/media/EjZCpPfWsAATzFA?format=jpg&name=large');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*HOME*/
+.site{
+    margin: 0;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+/*navbarfooter*/
+
+.navbarfooter {
+    min-height: 60px;
+}
+
+/*login*/
+
+.main{
+    justify-content: center;
+    align-items: center;
+    /*flex: 1;*/
+    min-height: calc(100vh - 120px);
+}
+
+.card{
+/* height: 370px;
+margin-top: auto;
+margin-bottom: auto;
+width: 400px; */
+background-color: rgba(0,0,0,0.5) !important;
+}
+
+.social_icon span{
+font-size: 60px;
+margin-left: 10px;
+color: #FFC312;
+}
+
+.social_icon span:hover{
+color: white;
+cursor: pointer;
+}
+
+.card-header h3{
+color: white;
+}
+
+.social_icon{
+position: absolute;
+right: 20px;
+top: -45px;
+}
+
+.input-group-prepend span{
+width: 50px;
+background-color: #FFC312;
+color: black;
+border:0 !important;
+}
+
+input:focus{
+outline: 0 0 0 0  !important;
+box-shadow: 0 0 0 0 !important;
+
+}
+
+.remember{
+color: white;
+}
+
+.remember input
+{
+width: 20px;
+height: 20px;
+margin-left: 15px;
+margin-right: 5px;
+}
+
+.login_btn{
+color: black;
+background-color: #FFC312;
+width: 100px;
+}
+
+.login_btn:hover{
+color: black;
+background-color: white;
+}
+
+.links{
+color: white;
+}
+
+.links a{
+margin-left: 4px;
+}
+
+
+/*footer*/
+
+.backgroundfooter {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+/*SHOP*/
+
+/*cards*/
+
+.cardshop {
+    /* width: 350px; */
+    border: 3px;
+    border-color: blue;
+    border-style: solid;
+    border-radius: 5px
+}
+
+.containershop {
+    margin: 5px 10px 5px 10px;
+}
+
+.middle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column !important;
+    padding: 5px 5px 5px 5px;
+}
+
+.bottom {
+    background: lightcyan;
+    padding-top: 5px;
+}
+
+.backgroundshop {
+    color: #495057;
+    background-color: lightcyan;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    width: 170px;
+    margin: 0px 0px 5px 0px;
+}
+
+.add {
+    height: 38px;
+    border-radius: 4px;
+    padding-right: 12px;
+    padding-left: 10px;
+    margin: 5px 0px 5px 0px;
+}
+
+.centerbutt {
+    display: flex;
+    justify-content: center;
+    flex-direction:column;
+    align-items: center;
+}
+
+.centertext {
+    font-size: 13px;
+}
+
+
+@media (min-width: 576px) {
+    .input-group {
+        width: 130px;
+        margin: 0px 5px 10px 10px;
+    }
+
+    .centerbutt {
+        display: flex;
+        justify-content: center;
+        flex-direction:row;
+    }
+
+    .add {
+        border-radius: 4px;
+        margin: 0px 10px 10px 5px;
+        padding-right: 12px;
+        padding-left: 10px;
+    }
+}
+
+@media (min-width: 768px) {
+    .centertext {
+        font-size: 12px;
+    }
+}
