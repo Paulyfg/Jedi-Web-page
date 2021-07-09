@@ -1,35 +1,38 @@
-function isEmpty(value){
-    return (value == null || value.length === 0);
-}
+var url = "https://catsworld.herokuapp.com/db";
 
-window.onload = function(){
-    
-    document.getElementById("myForm").addEventListener("submit", function(event) {
-        event.preventDefault();
+// function isEmpty(value){
+//     return (value == null || value.length === 0);
+// }
 
-        var username = document.getElementById("username").value;
-        var email = document.getElementById("email").value;
-        var password = document.getElementById("password").value;
+$( window ).on( "load", () => {
 
-        if (isEmpty(username) || isEmpty(email) || isEmpty(password)) {
+   $( '#submitbutt' ).on( "click", () => {
 
-            document.getElementById("Warning").innerHTML = 
-                `<div class="alert alert-danger alert-dismissible fade show" role="alert"> 
-                    <strong>Error!</strong> All fields are required.
-                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>`
+        var username = $('#username').val();
+        var password = $('#password').val();
 
-        } else {
-            alert(`Welcome, ${username}!`);
-            console.log(email, password);
+        axios.get(`${url}?name=${username}`)
+            .then( response => {
+                var data = response.data;
+                if(data.password===password) {
+                    alert('Welcome');
+                }
+            } )
+            .catch( err => {
+                console.log(err);
+            } )
 
-            //window.location.replace('video.html');
+        // axios.post(${url}, )
+        //     .then( response => {
+        //         var data = response.data;
+        //         if(data.password===password) {
+        //             alert('Welcome');
+        //         }
+        //     } )
+        //     .catch( err => {
+        //         console.log(err);
+        //     } )
+    });
 
-        }
-
-    })
-
-}
+});
 
