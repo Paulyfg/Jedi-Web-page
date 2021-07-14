@@ -1,21 +1,11 @@
+/*body*/
 
-body, html {
-    background-image: url('https://pbs.twimg.com/media/EjZCpPfWsAATzFA?format=jpg&name=large');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    margin: 0;
-    padding: 0;
-}
-
-
-/*HOME*/
 .site{
     margin: 0;
     min-height: 100vh;
-    width: 100vw;
+    /* width: 100vw; */
 }
+
 
 /*navbarfooter*/
 
@@ -23,20 +13,33 @@ body, html {
     min-height: 60px;
 }
 
-/*login*/
+/*footer*/
+
+.backgroundfooter {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+/*main*/
 
 .main{
     justify-content: center;
     align-items: center;
-    /*flex: 1;*/
+    flex-direction:column;
     min-height: calc(100vh - 120px);
 }
 
+
+/*login and register*/
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    /* width: 170px;
+    margin: 0px 0px 5px 0px; */
+}
+
 .card{
-/* height: 370px;
-margin-top: auto;
-margin-bottom: auto;
-width: 400px; */
 background-color: rgba(0,0,0,0.5) !important;
 }
 
@@ -71,7 +74,6 @@ border:0 !important;
 input:focus{
 outline: 0 0 0 0  !important;
 box-shadow: 0 0 0 0 !important;
-
 }
 
 .remember{
@@ -106,15 +108,13 @@ margin-left: 4px;
 }
 
 
-/*footer*/
+/*cats*/
 
-.backgroundfooter {
-    background-color: rgba(0, 0, 0, 0.2);
+.maincards{
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 120px);
 }
-
-/*SHOP*/
-
-/*cards*/
 
 .cardshop {
     /* width: 350px; */
@@ -136,11 +136,6 @@ margin-left: 4px;
     padding: 5px 5px 5px 5px;
 }
 
-.bottom {
-    background: lightcyan;
-    padding-top: 5px;
-}
-
 .backgroundshop {
     color: #495057;
     background-color: lightcyan;
@@ -152,35 +147,49 @@ margin-left: 4px;
     align-items: center;
 }
 
-.input-group {
-    display: flex;
-    justify-content: center;
-    width: 170px;
-    margin: 0px 0px 5px 0px;
+
+/*About Us*/
+
+.container {
+    background-color: lightcyan;
+    border: 3px;
+    border-color: blue;
+    border-style: solid;
+    border-radius: 5px;
 }
 
-.add {
-    height: 38px;
-    border-radius: 4px;
-    padding-right: 12px;
-    padding-left: 10px;
-    margin: 5px 0px 5px 0px;
+.subtitle {
+    margin: 5px;
+    font-size: 25px;
+    text-align: left;
+    color: rgb(13, 0, 126);
 }
 
-.centerbutt {
-    display: flex;
-    justify-content: center;
-    flex-direction:column;
-    align-items: center;
+.inline {
+    display: inline-block;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
-.centertext {
-    font-size: 13px;
+.list {
+    list-style-type: square;
 }
 
+
+/*responsivness*/
+
+@media (max-width: 768px) {
+    body, html {
+        background-color: rgb(255, 205, 172) !important;
+    }
+    
+    .format {
+        width: auto;
+    }
+}
 
 @media (min-width: 576px) {
-    .input-group {
+    .group-cards {
         width: 130px;
         margin: 0px 5px 10px 10px;
     }
@@ -200,7 +209,23 @@ margin-left: 4px;
 }
 
 @media (min-width: 768px) {
-    .centertext {
-        font-size: 12px;
+    body, html {
+        background-image: url('https://wallpaperaccess.com/full/1726461.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-attachment: fixed;
+        margin: 0;
+        padding: 0;
+    }
+
+    .format {
+        width: 45%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .format {
+        width: 30%;
     }
 }
